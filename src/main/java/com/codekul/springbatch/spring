@@ -1,0 +1,57 @@
+maven
+1.a build automation tool used primarily for Java projects
+2. to build and manage projects
+
+Spring Framework is a powerful, open-source framework for Java, widely used for building
+enterprise applications. It provides comprehensive infrastructure support for developing
+Java applications and is known for its flexibility and ease of integration with various
+technologies.
+
+Core Features of Spring Framework
+
+    Dependency Injection (DI) – Manages object dependencies and promotes loose coupling.
+    Aspect-Oriented Programming (AOP) – Separates cross-cutting concerns like logging and security.
+    Spring MVC – A framework for building web applications.
+    Spring Boot – Simplifies Spring development with auto-configuration and embedded servers.
+    Spring Data – Simplifies database interactions, including JPA, MongoDB, and Redis.
+    Spring Security – Provides authentication, authorization, and protection against common security threats.
+    Spring Cloud – Helps in building distributed microservices architectures.
+    Spring Batch – Supports batch processing for large-scale data operations.
+    Spring WebFlux – Reactive programming support for handling asynchronous data streams.
+
+Common Spring Framework Modules
+
+    Spring Core (Dependency Injection, Bean Management)
+    Spring MVC (Web applications, REST APIs)
+    Spring Boot (Microservices, Embedded Servers)
+    Spring Security (Authentication & Authorization)
+    Spring Data JPA (Database interactions)
+    Spring Cloud (Microservices orchestration)
+
+HTTP METHODS
+1. GET
+	Used to retrieve data from a server
+	It is idempotent (multiple identical requests produce the same result).
+2. POST
+	Used to create a new resource.
+	Not idempotent (multiple requests may create duplicate resources).
+3. PUT
+    Used to update an existing resource or create it if it does not exist.
+    It is idempotent (repeated requests with the same data result in the same state).
+4. DELETE
+    Used to delete a resource.
+    It is idempotent (deleting the same resource multiple times results in the same state).
+5. PATCH
+    Used to partially update a resource.
+    Unlike PUT, which replaces the entire resource, PATCH updates only the specified fields.
+6. HEAD
+    Similar to GET, but it only returns the headers (no response body).
+    Useful for checking if a resource exists before making a GET request.
+7. OPTIONS
+    Returns the allowed HTTP methods for a given resource.
+    Useful for CORS (Cross-Origin Resource Sharing).
+8. TRACE
+    Used for debugging. It echoes back the received request.
+9. CONNECT
+    Used to establish a tunnel (e.g., for HTTPS proxy connections).
+
