@@ -1,0 +1,54 @@
+A bean is an object managed by the Spring IoC container.
+It is created, configured, and injected automatically by Spring based on the configurations provided in Java,
+ XML, or annotations.
+
+ 1. Using @Component Annotation
+     Spring automatically detects and registers this class as a bean.
+     @Component  --- class level annotation
+     class Emp{
+        void print(){
+            ////
+        }
+     }
+ 2. Using @Bean Annotation in a Configuration Class
+     Manually registering a bean in a Java-based configuration.
+     @Configuration --- class level annotation
+     class Emp{
+        @Bean --- method level annotation
+        Emp getEmp(){
+            return new Emp();
+        }
+     }
+ 3. Using XML Configuration
+    <bean id="engine" class="com.example.Engine"/>
+
+**** Bean Types:
+   1. singleton (default)
+   	    A single instance is created for the entire application.
+   	    Same object is shared across the application
+   	    Even if multiple objects request Singleton Bean, only one instance will be used.
+   2. prototype
+   	    A new instance is created every time it is requested.
+   	    Good for stateful objects where each request needs a fresh instance.
+   3. request (Web Only)
+        A new instance is created per HTTP request.
+   4. session (Web Only)
+   	    A new instance is created per HTTP session.
+   5. application (Web Only)
+   	    A new instance is created per servlet context.
+   6. websocket (Web Only)
+        A new instance is created per WebSocket session.
+
+ When to Use Which Scope?
+	1. Singleton
+	  When you need one shared instance (e.g., Database connections, Configuration classes).
+	2. Prototype
+	  When each request should have a new instance (e.g., User-specific objects, non-thread-safe beans).
+	3. Request
+	  When a bean should exist only for one HTTP request (e.g., User input handling).
+	4. Session
+	  When a bean should persist for one user session (e.g., Shopping carts, authentication tokens).
+	5. Application
+	  When a bean should be shared across the whole web application (e.g., global settings).
+	6. WebSocket
+	  When a bean should persist for one WebSocket connection (e.g., chat sessions).

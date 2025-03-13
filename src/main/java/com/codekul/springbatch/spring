@@ -55,3 +55,26 @@ HTTP METHODS
 9. CONNECT
     Used to establish a tunnel (e.g., for HTTPS proxy connections).
 
+Problems with Servlets and JSP (why frameworks are needed)
+1. Too much boilerplate code
+        Writing Servlets requires handling request/response, session management, and exception handling manually.
+    Developers must manually parse request parameters and generate dynamic responses.
+2. Mixing Business Logic with Presentation
+		JSP allows Java code inside HTML using scriptlets (<% %>), leading to spaghetti code.
+    Business logic inside JSP violates the Separation of Concerns (SoC) principle.
+3. Lack of Built-in MVC Architecture
+		Servlets and JSP do not enforce separation of concerns (Model, View, Controller).
+    Manually managing routing and request processing is difficult.
+4.
+5. Poor Scalability
+		Every request creates a new thread, consuming more resources.
+    Developers must manually implement connection pooling and optimize performance.
+6. Manual Configuration
+		Servlets require web.xml configuration for mapping URLs to servlets.
+    Configuration changes require server restarts.
+7. Security Challenges
+		Developers must manually implement user authentication and authorization.
+    Protection against SQL Injection, CSRF, and XSS requires additional coding.
+8. Testing and Maintenance Issues
+		Servlets depend on HttpServletRequest and HttpServletResponse, making unit testing hard.
+	Requires mocking request/response for testing.

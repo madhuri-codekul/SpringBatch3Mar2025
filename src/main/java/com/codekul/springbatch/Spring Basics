@@ -1,0 +1,33 @@
+    The developer manually creates objects using new and manages dependencies.
+	This leads to tight coupling, making the code hard to maintain and test.
+
+ **** Inversion of Control
+ - a design principle where the control of object creation and dependency management is
+   transferred from the developer to a framework
+ - creates and manages objects (beans) automatically
+ - Dependencies are injected dynamically at runtime, reducing tight coupling
+
+**** Spring Container
+- core of the Spring Framework
+- responsible for creating, managing, and configuring Spring Beans (objects)
+- provides dependency injection
+- handles the complete lifecycle of beans in a Spring application
+Types of Spring Containers
+1. BeanFactory
+- The most basic container in Spring.
+- Uses lazy initialization (creates beans only when requested).
+- Suitable for lightweight applications with minimal configuration
+
+2. ApplicationContext(Extends BeanFactory)
+- Eager initialization (beans are created at startup).
+- Event propagation (publishing and listening to events)
+
+How Spring Container Works?
+- Loads Configuration: Reads XML or Java-based configuration.
+- Creates Bean Definitions: Identifies beans and their dependencies.
+- Performs Dependency Injection: Injects required dependencies.
+- Manages Bean Lifecycle: Initializes, manages, and destroys beans as per their scope.
+
+**** Dependency Injection (DI)
+ - a design pattern used to implement IoC
+ - a class creating its dependencies, they are provided (injected) from an external source (Spring Container)
