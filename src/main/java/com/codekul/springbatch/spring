@@ -78,3 +78,14 @@ Problems with Servlets and JSP (why frameworks are needed)
 8. Testing and Maintenance Issues
 		Servlets depend on HttpServletRequest and HttpServletResponse, making unit testing hard.
 	Requires mocking request/response for testing.
+
+
+Sequence of Startup Spring Boot Application:
+1. Running Main method
+2. Initialize Spring Application instance
+3. Load application.properties (application.yml)
+4. Load Application Context Initialize bean
+5. scan & loads components
+6. @Bean method
+7. @Service,@Repository,@Controller,@RestController,
+8.

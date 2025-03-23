@@ -1,0 +1,30 @@
+1. @Component - creates bean
+
+2. @SpringBootApplication
+	- combines 3 Spring annotations
+	- used on the main class of Spring boot application
+	- @ComponentScan :
+		- scanning components(component,repository,beans,controller,services)
+
+	- @EnableAutoConfiguration :
+		- enable auto configuration
+		- automatically configures the spring boot application based on dependencies in classpath
+
+
+	- @SpringBootConfiguration :
+		- configure spring boot defaults
+		- similar to @Configuration
+3. @Autowired
+	- enables automatic dependency injection
+	- allow spring to inject required beans(dependencies)
+
+4. @Controller
+	- marks a class as controller, which is handling the HTTP requests
+
+5. @ResponseBody
+	- indicated that return value of method directly into the response body
+6. @RestController
+	- combines @Controller and @ResponseBody
+	- used to create Restful web services, where the controller method return data directly
+		in response body
+
