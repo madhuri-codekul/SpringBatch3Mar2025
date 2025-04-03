@@ -27,4 +27,14 @@
 	- combines @Controller and @ResponseBody
 	- used to create Restful web services, where the controller method return data directly
 		in response body
+7. @Id
+	- Specifies the primary key of an entity
 
+8.  @GeneratedValue strategies
+	i. GenerationType.IDENTITY
+		- auto increment(automatically generate the primary key)
+	ii. GenerationType.SEQUENCE
+		- supports sequence
+		- custom sequence
+	iii. GenerationType.AUTO
+		-

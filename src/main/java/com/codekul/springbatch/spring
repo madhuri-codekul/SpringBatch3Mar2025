@@ -88,4 +88,7 @@ Sequence of Startup Spring Boot Application:
 5. scan & loads components
 6. @Bean method
 7. @Service,@Repository,@Controller,@RestController,
-8.
+
+** application properties
+- configure various aspects of the application
+- contains key-value pairs(application settings,database connections)
